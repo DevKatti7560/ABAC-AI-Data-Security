@@ -1,0 +1,100 @@
+{
+  "requests": [
+    {
+      "request_id": "REQ001",
+      "user_id": "USR001",
+      "role": "researcher",
+      "department": "AI",
+      "clearance": "CONFIDENTIAL",
+      "resource": "gait_analysis_dataset",
+      "classification": "CONFIDENTIAL",
+      "action": "READ",
+      "purpose": "research",
+      "location": "campus"
+    },
+    {
+      "request_id": "REQ002",
+      "user_id": "USR002",
+      "role": "student",
+      "department": "AI",
+      "clearance": "PUBLIC",
+      "resource": "public_ai_dataset",
+      "classification": "PUBLIC",
+      "action": "READ",
+      "purpose": "academic",
+      "location": "campus"
+    },
+    {
+      "request_id": "REQ003",
+      "user_id": "USR003",
+      "role": "student",
+      "department": "AI",
+      "clearance": "PUBLIC",
+      "resource": "patient_gait_dataset",
+      "classification": "CONFIDENTIAL",
+      "action": "READ",
+      "purpose": "academic",
+      "location": "campus"
+    },
+    {
+      "request_id": "REQ004",
+      "user_id": "USR004",
+      "role": "admin",
+      "department": "IT",
+      "clearance": "RESTRICTED",
+      "resource": "patient_dataset",
+      "classification": "RESTRICTED",
+      "action": "READ",
+      "purpose": "administration",
+      "location": "campus"
+    },
+    {
+      "request_id": "REQ005",
+      "user_id": "USR005",
+      "role": "data_scientist",
+      "department": "AI",
+      "clearance": "INTERNAL",
+      "resource": "model_training_dataset",
+      "classification": "INTERNAL",
+      "action": "READ",
+      "purpose": "model_development",
+      "location": "lab"
+    },
+    {
+      "request_id": "REQ006",
+      "user_id": "USR006",
+      "role": "researcher",
+      "department": "AI",
+      "clearance": "CONFIDENTIAL",
+      "resource": "research_dataset",
+      "classification": "INTERNAL",
+      "action": "WRITE",
+      "purpose": "research",
+      "location": "lab"
+    },
+    {
+      "request_id": "REQ007",
+      "user_id": "USR007",
+      "role": "student",
+      "department": "AI",
+      "clearance": "PUBLIC",
+      "resource": "patient_dataset",
+      "classification": "RESTRICTED",
+      "action": "DELETE",
+      "purpose": "academic",
+      "location": "campus"
+    },
+    {
+      "request_id": "REQ008",
+      "user_id": "USR008",
+      "role": "security_officer",
+      "department": "Security",
+      "clearance": "RESTRICTED",
+      "resource": "security_audit_dataset",
+      "classification": "RESTRICTED",
+      "action": "READ",
+      "purpose": "security_audit",
+      "location": "security_lab"
+    }
+  ]
+}

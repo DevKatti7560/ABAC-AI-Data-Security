@@ -1,0 +1,111 @@
+{
+  "version": "2.0",
+  "description": "ABAC policies for AI dataset access control",
+  "policies": [
+    {
+      "policy_id": "P100",
+      "name": "Block Student Access to Confidential Data",
+      "description": "Students are explicitly denied access to confidential AI datasets.",
+      "effect": "DENY",
+      "priority": 100,
+      "conditions": {
+        "role": ["student"],
+        "classification": ["CONFIDENTIAL"],
+        "action": ["READ"]
+      }
+    },
+    {
+      "policy_id": "P090",
+      "name": "Block Remote Restricted Data Access",
+      "description": "Restricted datasets cannot be accessed from remote locations.",
+      "effect": "DENY",
+      "priority": 90,
+      "conditions": {
+        "classification": ["RESTRICTED"],
+        "location": ["remote"]
+      }
+    },
+    {
+      "policy_id": "P001",
+      "name": "Researcher AI Dataset Read",
+      "description": "Allows AI researchers to read confidential AI datasets for research purposes.",
+      "effect": "ALLOW",
+      "priority": 50,
+      "conditions": {
+        "role": ["researcher"],
+        "department": ["AI"],
+        "action": ["READ"],
+        "purpose": ["research"],
+        "classification": ["CONFIDENTIAL"]
+      }
+    },
+    {
+      "policy_id": "P002",
+      "name": "Student Public Dataset Read",
+      "description": "Allows students to read public AI datasets for academic purposes.",
+      "effect": "ALLOW",
+      "priority": 40,
+      "conditions": {
+        "role": ["student"],
+        "action": ["READ"],
+        "purpose": ["academic"],
+        "classification": ["PUBLIC"]
+      }
+    },
+    {
+      "policy_id": "P003",
+      "name": "Admin Restricted Dataset Access",
+      "description": "Allows authorized administrators to read restricted datasets.",
+      "effect": "ALLOW",
+      "priority": 50,
+      "conditions": {
+        "role": ["admin"],
+        "clearance": ["RESTRICTED"],
+        "action": ["READ"],
+        "classification": ["RESTRICTED"]
+      }
+    },
+    {
+      "policy_id": "P004",
+      "name": "Data Scientist Internal Dataset Access",
+      "description": "Allows data scientists to read internal AI datasets for model development.",
+      "effect": "ALLOW",
+      "priority": 50,
+      "conditions": {
+        "role": ["data_scientist"],
+        "department": ["AI", "Data Science"],
+        "action": ["READ"],
+        "purpose": ["model_development"],
+        "classification": ["INTERNAL"]
+      }
+    },
+    {
+      "policy_id": "P005",
+      "name": "Security Team Audit Access",
+      "description": "Allows security personnel to read audit and security datasets.",
+      "effect": "ALLOW",
+      "priority": 50,
+      "conditions": {
+        "role": ["security_officer"],
+        "department": ["Security"],
+        "action": ["READ"],
+        "purpose": ["security_audit"],
+        "classification": ["RESTRICTED"]
+      }
+    },
+    {
+      "policy_id": "P006",
+      "name": "Researcher Write Access",
+      "description": "Allows approved researchers to write to internal research datasets.",
+      "effect": "ALLOW",
+      "priority": 50,
+      "conditions": {
+        "role": ["researcher"],
+        "department": ["AI"],
+        "action": ["WRITE"],
+        "purpose": ["research"],
+        "classification": ["INTERNAL"]
+      }
+    }
+  ]
+}
