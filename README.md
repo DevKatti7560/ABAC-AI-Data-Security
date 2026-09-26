@@ -37,6 +37,19 @@ The system produces an **ALLOW** or **DENY** decision and provides an explanatio
 * Automate authorization testing using Pytest.
 
 ---
+## ⭐ Project Highlights
+
+- 🔐 Attribute-Based Access Control for AI datasets
+- ⚖️ Priority-based policy evaluation
+- 🚫 Explicit ALLOW and DENY policies
+- 🛡️ Default-deny security model
+- 🔎 Explainable authorization decisions
+- 📋 SQLite-based audit logging
+- 📊 Streamlit security analytics dashboard
+- 📜 JSON-based configurable policies
+- 🧩 Dedicated policy management module
+- 🧪 Automated authorization testing with Pytest
+- 🐍 Python-based implementation
 
 ## ✨ Key Features
 
@@ -502,7 +515,37 @@ Access decisions are recorded for security monitoring and investigation.
 The engine provides information about why a request was allowed or denied.
 
 ---
+## 📸 Application Screenshots
 
+### 1. Security Dashboard
+
+The Streamlit dashboard provides an overview of the ABAC security system, including total access requests, allowed requests, denied requests, denial rate, and active policies.
+
+![Security Dashboard](screenshots/dashboard.png)
+
+---
+
+### 2. Access Control Interface
+
+The access-control interface allows an access request to be submitted using multiple attributes, including user role, department, security clearance, dataset classification, requested action, purpose, and access location.
+
+![Access Control Interface](screenshots/access-control.png)
+
+---
+
+### 3. Authorization Decision
+
+The authorization result provides an explainable access-control decision. The screenshot demonstrates an **ALLOW** decision under policy `P002`, along with the matched attributes and policy explanation.
+
+![Authorization Decision](screenshots/authorization-decision.png)
+
+---
+
+### 4. Security Audit Log
+
+The application includes a dedicated Security Audit Log section for displaying access attempts and their authorization results. The screenshot shows the audit-log interface in its clean initial state before access requests are recorded.
+
+![Security Audit Log](screenshots/audit-log.png)
 ## 🚀 Future Enhancements
 
 Potential future improvements include:
