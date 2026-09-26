@@ -583,17 +583,4 @@ Dayananda Sagar College of Engineering
 
 ---
 
-## ⭐ Project Highlights
 
-```text
-✔ Attribute-Based Access Control
-✔ Explicit ALLOW / DENY Policies
-✔ Policy Priority
-✔ Default-Deny Security
-✔ Explainable Authorization
-✔ SQLite Audit Logging
-✔ Security Analytics Dashboard
-✔ Policy Management
-✔ Automated Pytest Validation
-✔ JSON-Based Policy Configuration
-```
